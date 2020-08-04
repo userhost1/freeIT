@@ -41,7 +41,7 @@ public class GameXO {
                 break;
             }
 
-            //проверка на ничью когда нет больше хода
+            //проверочка после последнего хода :)
             if (!hasMoreEmptySpace()) {
                 gameField();
                 System.out.println("НИЧЬЯ!");
