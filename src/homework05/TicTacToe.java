@@ -2,7 +2,7 @@ package homework05;
 
 import java.util.Scanner;
 
-public class GameXO {
+public class TicTacToe {
 
     static String[][] xo = new String[3][3];
 
