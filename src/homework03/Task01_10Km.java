@@ -1,6 +1,6 @@
 package homework03;
 
-public class task01_10Km {
+public class Task01_10Km {
     public static void main(String[] args) {
 //        1)Начав тренировки, спортсмен в первый день пробежал 10 км.
 //          Каждый день он увеличивал дневную норму на 10% нормы предыдущего дня.

@@ -1,6 +1,6 @@
 package homework03;
 
-public class task04_multiplyWithoutMultiply {
+public class Task04_multiplyWithoutMultiply {
     public static void main(String[] args) {
 
         int a = 2, b = 25;

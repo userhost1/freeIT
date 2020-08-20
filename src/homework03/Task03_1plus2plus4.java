@@ -1,6 +1,6 @@
 package homework03;
 
-public class task03_1plus2plus4 {
+public class Task03_1plus2plus4 {
     public static void main(String[] args) {
 //        3)Вычислить: 1+2+4+8+...+256
 
