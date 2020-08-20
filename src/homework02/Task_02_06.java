@@ -2,6 +2,8 @@ package homework02;
 
 import java.util.Random;
 
+//Даны 2 числа. Вывести большее из них
+
 public class Task_02_06 {
     public static void main(String[] args) {
 
