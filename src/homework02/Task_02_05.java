@@ -4,7 +4,7 @@ package homework02;
 
 import java.util.Random;
 
-public class task_02_05 {
+public class Task_02_05 {
     public static void main(String[] args) {
 
         int[] numbers = new int[3];

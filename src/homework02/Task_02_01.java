@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 //        Например, "это однозначное положительное число".
 //        Достаточно будет определить, является личисло однозначным, "двухзначным или трехзначным и более.
 
-public class task_02_01 {
+public class Task_02_01 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

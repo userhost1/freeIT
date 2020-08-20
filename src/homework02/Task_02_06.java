@@ -2,7 +2,7 @@ package homework02;
 
 import java.util.Random;
 
-public class task_02_06 {
+public class Task_02_06 {
     public static void main(String[] args) {
 
         int a = new Random().nextInt();

@@ -8,7 +8,7 @@ package homework02;
 
 import java.util.Scanner;
 
-public class task_02_03 {
+public class Task_02_03 {
     public static void main(String[] args) {
 
         System.out.println("Число");
