@@ -23,7 +23,7 @@ public class part2_t20 {
     public static String washingMachineForWord(String word) {
 
         for (char c : symbols) {
-            if (c == word.charAt(word.length() - 1)) {
+            if (word.endsWith(String.valueOf(c))) {
                 return washingMachineForWord(word.substring(0, (word.length() - 1)).toLowerCase());
             }
         }
