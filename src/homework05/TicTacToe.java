@@ -41,7 +41,7 @@ public class TicTacToe {
                 break;
             }
 
-            //проверочка после последнего хода :)
+            //  проверка, когда нет боьше ходов :)
             if (!hasMoreEmptySpace()) {
                 gameField();
                 System.out.println("НИЧЬЯ!");
