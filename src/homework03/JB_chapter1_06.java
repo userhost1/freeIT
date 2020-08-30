@@ -10,7 +10,7 @@ import java.util.Random;
 public class JB_chapter1_06 {
     public static void main(String[] args) {
 
-        int number = new Random().nextInt();
+        int number = new Random().nextInt(1000);
 
         System.out.println(number);
 
