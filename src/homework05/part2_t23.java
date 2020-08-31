@@ -10,6 +10,6 @@ public class part2_t23 {
         String text = "Привет. в данном тексте не находится совершенно никакой информации. <p id=”p1”> Он был создан <pip-pop-pup> специально как <pol> тестовая строка <p> <programming is cool. it`is the only thing for your brain work with pleasure>";
 
         System.out.println("Unmodified text: " + text);
-        System.out.println("Modefired text: " + text.replaceAll("(<p[^>]*>)", "<p>"));
+        System.out.println("Modified text: " + text.replaceAll("(<p[^>]*>)", "<p>"));
     }
 }
