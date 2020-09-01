@@ -8,7 +8,7 @@ public class part2_t18 {
 
         int count = 0;
 
-        char[] chars = {'.', ',', '!', '?', '-', ':', ';'};
+        char[] chars = {'.', ',', '!', '?', '-',';',':'};
 
         for (char symbol : someText.toCharArray()) {
             for (char c : chars) {
