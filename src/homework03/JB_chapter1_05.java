@@ -7,17 +7,27 @@ import java.util.Random;
 public class JB_chapter1_05 {
     public static void main(String[] args) {
 
-        int number1 = new Random().nextInt(8999) + 1000;
-        int number2 = new Random().nextInt(8999) + 1000;
+        String number = String.valueOf(new Random().nextInt(8999) + 1000);
+        boolean b = true;
 
-        if ((number1 != number2)) {
-            System.out.println("Все цифры числа различны.");
-        } else {
-            System.out.println("все цифры числа одинаковы.");
+        if (number.length() > 1) {
+
+            marker:
+            for (int i = 0; i < number.length() - 1; i++) {
+                for (int j = i + 1; j < number.length(); j++) {
+                    if (number.charAt(i) == number.charAt(j)) {
+                        System.out.println(number);
+                        System.out.println("Число имеет одинаковые цыфры: " + number.charAt(i));
+                        b = false;
+                        break marker;
+                    }
+                }
+            }
         }
 
-        System.out.println("Number 1: " + number1);
-        System.out.println("Number 2: " + number2);
-
+        if (b) {
+            System.out.println("Все цифры числа " + number + " различный");
+        }
     }
+
 }

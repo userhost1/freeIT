@@ -9,7 +9,7 @@ public class JB_chapter1_04 {
 
         int number = new Random().nextInt(8999) + 1000;
 
-        System.out.println(number);
+        System.out.println("Original number: " + number);
 
         String s = String.valueOf(number);
 
@@ -18,10 +18,11 @@ public class JB_chapter1_04 {
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
             newNumber += c;
+            System.out.println("New number: " + newNumber);
         }
 
         int i = Integer.parseInt(newNumber);
 
-        System.out.println((char) i);
+        System.out.println("Reversed number: " + i);
     }
 }
