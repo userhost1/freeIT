@@ -1,5 +1,6 @@
 package homework05;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -7,10 +8,8 @@ public class TicTacToe {
     static String[][] xo = new String[3][3];
 
     static {
-        for (int i = 0; i < xo.length; i++) {
-            for (int j = 0; j < xo[i].length; j++) {
-                xo[i][j] = "_";
-            }
+        for (String[] strings : xo) {
+            Arrays.fill(strings, "_");
         }
     }
 
@@ -18,7 +17,7 @@ public class TicTacToe {
 
         Scanner in = new Scanner(System.in);
 
-        int position = 0;
+        int position;
 
         rule();
 
@@ -36,8 +35,8 @@ public class TicTacToe {
             numOfPosition(position, "X");
 
             if (hasWinner("X")) {
-                System.out.println("Выиграли крестики-[X]");
                 gameField();
+                System.out.println("Выиграли крестики-[X]");
                 break;
             }
 
@@ -60,8 +59,8 @@ public class TicTacToe {
             numOfPosition(position, "O");
 
             if (hasWinner("O")) {
-                System.out.println("Выиграли нолики-[O]");
                 gameField();
+                System.out.println("Выиграли нолики-[O]");
                 break;
             }
         }
