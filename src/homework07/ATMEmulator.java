@@ -100,6 +100,13 @@ public class ATMEmulator {
                     by20 -= i;
                     summa -= i * 20;
                 } else {
+                    by20 += _20;
+                    by50 += _50;
+                    by100 += _100;
+                    _20 = 0;
+                    _50 = 0;
+                    _100 = 0;
+
                     System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
                     return false;
                 }
@@ -116,6 +123,13 @@ public class ATMEmulator {
                     by20 -= i;
                     summa -= i * 20;
                 } else {
+                    by20 += _20;
+                    by50 += _50;
+                    by100 += _100;
+                    _20 = 0;
+                    _50 = 0;
+                    _100 = 0;
+
                     System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
                     return false;
                 }
