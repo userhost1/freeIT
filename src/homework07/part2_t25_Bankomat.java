@@ -21,5 +21,6 @@ public class part2_t25_Bankomat {
 
         bankomat.withdraw(970);
 
+
     }
 }
