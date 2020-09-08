@@ -27,8 +27,9 @@ public class ATMEmulator {
             this.by100 += by100;
 
             System.out.println("Money were loaded!");
+        } else {
+            System.out.println("Money were not loaded!");
         }
-        System.out.println("Money were not loaded!");
     }
 
     public boolean withdraw(int summa) {
