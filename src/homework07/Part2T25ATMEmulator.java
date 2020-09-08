@@ -19,6 +19,6 @@ public class Part2T25ATMEmulator {
 
         atmEmulator.getTotalSum();
 
-        atmEmulator.withdraw(970);
+        atmEmulator.withdraw(130);
     }
 }
