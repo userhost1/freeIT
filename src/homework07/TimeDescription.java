@@ -35,14 +35,7 @@ public class TimeDescription {
 
     public int compareTo(TimeDescription o) {
 
-        if (this.getAllSeconds() > o.getAllSeconds()) {
-            return 1;
-        } else if (this.getAllSeconds() < o.getAllSeconds()) {
-            return -1;
-        } else {
-            return 0;
-        }
-
+        return Integer.compare(this.getAllSeconds(), o.getAllSeconds());
     }
 
 }

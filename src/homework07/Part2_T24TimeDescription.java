@@ -6,7 +6,7 @@ package homework07;
 //  Создать два конструктора: получающий общее количество секунд, и часы, минуты и секунды по отдельности.
 //  Сделать метод для вывода данных.
 
-public class part2_t24_TimeDescription {
+public class Part2_T24TimeDescription {
     public static void main(String[] args) {
 
         TimeDescription time1 = new TimeDescription(10_800);

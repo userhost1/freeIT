@@ -9,16 +9,16 @@ package homework07;
 //  Создать конструктор с тремя параметрами – количеством купюр.
 
 
-public class part2_t25_Bankomat {
+public class Part2T25ATMEmulator {
 
     public static void main(String[] args) {
 
-        Bankomat bankomat = new Bankomat();
+        ATMEmulator atmEmulator = new ATMEmulator();
 
-        bankomat.load(0, 16, 2);
+        atmEmulator.load(0, 16, 2);
 
-        bankomat.getTotalSumma();
+        atmEmulator.getTotalSum();
 
-        bankomat.withdraw(970);
+        atmEmulator.withdraw(970);
     }
 }
