@@ -8,7 +8,7 @@ public class Bankomat {
 
     public String getTotalSumma() {
 
-        return "Total summa in bankomat: " + (by20 * 20 + by50 * 50 + by100 * 100) +
+        return "Total summa in ATM: " + (by20 * 20 + by50 * 50 + by100 * 100) +
                 "\nby20: " + by20 +
                 "\nby50: " + by50 +
                 "\nby100: " + by100;
