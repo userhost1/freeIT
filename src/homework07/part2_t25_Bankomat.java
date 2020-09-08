@@ -20,7 +20,5 @@ public class part2_t25_Bankomat {
         bankomat.getTotalSumma();
 
         bankomat.withdraw(970);
-
-
     }
 }
