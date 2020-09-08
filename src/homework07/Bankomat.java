@@ -58,16 +58,17 @@ public class Bankomat {
             System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
             return false;
         } else if (summa < restOfMoney()) {
+//100
             if (summa / 100 <= by100 && summa >= 100) {
                 _100 = summa / 100;
                 by100 -= _100;
                 summa -= 100 * _100;
-            } else if (summa / 100 > by100) {
+            } else if (summa / 100 > by100 && summa >= 100) {
                 _100 = by100;
                 by100 -= _100;
                 summa -= 100 * _100;
             }
-
+//50
             if (summa / 50 < by50 && summa >= 50) {
                 _50 = summa / 50;
                 by50 -= _50;
@@ -78,41 +79,52 @@ public class Bankomat {
                 summa -= 50 * _50;
             }
 
-            if (summa / 20 < by20) {
-                if (summa % 20 == 10 && _50 >= 1) {
-                    _50 -= 1;
-                    by50 += 1;
-                    summa += 50;
+//20
+            if (summa / 20 < by20 && summa >= 20) {
+                _20 = summa / 20;
+                by20 -= _20;
+                summa -= 20 * _20;
+            } else if (summa / 20 > by20 && summa >= 20) {
+                _20 = by20;
+                by20 -= 20;
+                summa -= 20 * _20;
+            }
 
-                    if (summa / 20 < by20) {
-                        int i = summa / 20;
-                        _20 += i;
-                        by20 -= i;
-                        summa -= i * 20;
-                    }
-                } else if (summa % 20 == 10 && _100 >= 1) {
-                    _100 -= 1;
-                    _50 = 1;
-                    summa += 50;
+            if (summa % 20 == 10 && _50 >= 1) {
+                _50 -= 1;
+                by50 += 1;
+                summa += 50;
 
-                    if (summa / 20 < by20) {
-                        int i = summa / 20;
-                        _20 += i;
-                        by20 -= i;
-                        summa -= i * 20;
-                    }
+                if (summa / 20 <= by20) {
+                    int i = summa / 20;
+                    _20 += i;
+                    by20 -= i;
+                    summa -= i * 20;
+                } else {
+                    System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
+                    return false;
+                }
+            } else if (summa % 20 == 10 && _100 >= 1 && by50 >= 1) {
+                _100 -= 1;
+                by100 += 1;
+                by50 -= 1;
+                _50 += 1;
+                summa += 50;
 
-                } else if (summa % 20 == 0 && summa >= 20) {
-                    _20 = summa / 20;
-                    by20 -= _20;
-                    summa -= 20 * _20;
+                if (summa / 20 < by20) {
+                    int i = summa / 20;
+                    _20 += i;
+                    by20 -= i;
+                    summa -= i * 20;
+                } else {
+                    System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
+                    return false;
                 }
             }
         }
 
-
         if (summa != 0) {
-            System.out.println("Что-то пошло не так!");
+            System.out.println("Что-то пошло не так или Вы возможно выбрали не у кратность которая является 10!");
             return false;
         }
 
