@@ -8,14 +8,14 @@ public class Bankomat {
 
     public String getTotalSumma() {
 
-        return "Total summa in bankomat: " + ((by20 * 20) + (by50 * 50) + (by100 * 100)) +
+        return "Total summa in bankomat: " + (by20 * 20 + by50 * 50 + by100 * 100) +
                 "\nby20: " + by20 +
                 "\nby50: " + by50 +
                 "\nby100: " + by100;
     }
 
     public int restOfMoney() {
-        return (by20 * 20) + (by50 * 50) + (by100 * 100);
+        return by20 * 20 + by50 * 50 + by100 * 100;
     }
 
 
@@ -58,7 +58,6 @@ public class Bankomat {
             System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
             return false;
         } else if (summa < restOfMoney()) {
-
             if (summa / 100 <= by100 && summa >= 100) {
                 _100 = summa / 100;
                 by100 -= _100;
@@ -117,7 +116,7 @@ public class Bankomat {
             return false;
         }
 
-        System.out.println("You have got money: " + (100 * _100 + 50 * _50 + 20 * _20));
+        System.out.println("You got money: " + (100 * _100 + 50 * _50 + 20 * _20));
         if (_100 > 0) {
             System.out.println("by 100: " + _100);
         }
