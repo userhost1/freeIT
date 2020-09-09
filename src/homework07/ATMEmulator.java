@@ -56,7 +56,7 @@ public class ATMEmulator {
             _20 = by20;
             by20 -= _20;
             summa = 0;
-        } else if (summa == restOfMoney() - 10) {
+        } else if (summa == restOfMoney() - 10 || summa == restOfMoney() - 30) {
             System.out.println("Please choose a different amount. \nThere are no bills of the required denomination in the ATM");
             return false;
         } else if (summa % 100 == 50 && by50 == 0) {
