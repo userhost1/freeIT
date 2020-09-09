@@ -9,9 +9,9 @@ public class ATMEmulator {
     public String getTotalSum() {
 
         return "Total summa in ATM: " + (by20 * 20 + by50 * 50 + by100 * 100) +
-                "\nby20: " + by20 +
+                "\nby100: " + by100 +
                 "\nby50: " + by50 +
-                "\nby100: " + by100;
+                "\nby20: " + by20;
     }
 
     public int restOfMoney() {
@@ -38,6 +38,15 @@ public class ATMEmulator {
 
         if (summa > restOfMoney()) {
             System.out.println("Insufficient funds!");
+            return false;
+        } else if (summa % 10 != 0) {
+            System.out.println("Please, choose multiplicity equals to 10");
+            return false;
+        } else if (summa == 30) {
+            System.out.println("Summa must be more than 30");
+            return false;
+        } else if (summa < 20) {
+            System.out.println("Summa must be more or equals 20");
             return false;
         } else if (summa == restOfMoney()) {
             _100 = by100;
@@ -143,7 +152,7 @@ public class ATMEmulator {
             _50 = 0;
             _100 = 0;
 
-            System.out.println("Что-то пошло не так или Вы, возможно, выбрали не ту кратность, которая является 10 или сумму меньшую 20!");
+            System.out.println("Что-то пошло не так!");
             return false;
         }
 
