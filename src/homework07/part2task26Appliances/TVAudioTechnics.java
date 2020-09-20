@@ -22,6 +22,10 @@ public class TVAudioTechnics extends LittleTechnics {
         return "Неподдерживаемый формат: " + format.toLowerCase();
     }
 
+    protected String getApplyingFormats() {
+        return applyingFormats;
+    }
+
     private boolean getPlayingAudio() {
         return playingAudio;
     }
@@ -49,7 +53,7 @@ public class TVAudioTechnics extends LittleTechnics {
         return "TVAudioTechnics{" +
                 "applyingForAudio=" + playingAudio() +
                 ", applyingForVideo=" + playingVideo() +
-                ", applyingFormats='" + applyingFormats + '\'' +
+                ", applyingFormats='" + getApplyingFormats() + '\'' +
                 ", name='" + name + '\'' +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
