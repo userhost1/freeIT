@@ -21,7 +21,7 @@ public class LightTransport extends LandTransport {
                 ", maxSpeed=" + maxSpeed +
                 ", weightKG=" + weightKG +
                 ", brand='" + brand + '\'' +
-                ", kWPower=" + getkWPower() + '}';
+                ", kWPower=" + getKWPower() + '}';
     }
 
     protected String getFuelConsumptionOverAPeriodOfTime(double hours) {

@@ -14,7 +14,7 @@ abstract class Transport {
         this.brand = brand;
     }
 
-    protected double getkWPower() {
+    protected double getKWPower() {
         return 0.74 * horsePower;
     }
 }

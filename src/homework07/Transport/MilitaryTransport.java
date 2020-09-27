@@ -22,10 +22,10 @@ public class MilitaryTransport extends AirTransport {
                 ", maxSpeed=" + maxSpeed +
                 ", weightKG=" + weightKG +
                 ", brand='" + brand + '\'' +
-                ", kWPower=" + getkWPower() + '}';
+                ", kWPower=" + getKWPower() + '}';
     }
 
-    public double getkWPower() {
+    public double getKWPower() {
         return 0.74 * horsePower;
     }
 

@@ -19,10 +19,10 @@ public class FreightTransport extends LandTransport {
                 ", maxSpeed=" + maxSpeed +
                 ", weightKG=" + weightKG +
                 ", brand='" + brand + '\'' +
-                ", kWPower=" + getkWPower() + '}';
+                ", kWPower=" + getKWPower() + '}';
     }
 
-    protected double getkWPower() {
+    protected double getKWPower() {
         return 0.74 * horsePower;
     }
 
