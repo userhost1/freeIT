@@ -18,7 +18,7 @@ public class Part2T28Generic {
         System.out.println(stringClass.get(1)); //check for getting wrong index
 
         ElementsClass<Character> characterClass = new ElementsClass<>();
-        characterClass.add('5');
+        characterClass.add('6');
         characterClass.add((char) 55);
         System.out.println(characterClass.get(0));
         System.out.println(characterClass.get(1));
@@ -40,9 +40,9 @@ public class Part2T28Generic {
         }
 
         public T get(int index) {
-            try {
+            if (index >= 0 && index < elements.size()) {
                 return elements.get(index);
-            } catch (Exception e) {
+            } else {
                 System.out.print("Вы пытаетесь получить элемент которого нет. ");
                 return null;
             }
