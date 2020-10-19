@@ -8,18 +8,27 @@ import java.util.ArrayList;
 public class Part2T28Generic {
     public static void main(String[] args) {
 
-        ElementsClass<Object> elements = new ElementsClass<>();
-        elements.add("String");
-        elements.add('5');
-        elements.add(5);
-        elements.add((char) 55);
+        ElementsClass<Integer> integerClass = new ElementsClass<>();
+        integerClass.add(5);
+        System.out.println(integerClass.get(0));
 
-        System.out.println(elements.get(0));
-        System.out.println(elements.get(1));
-        System.out.println(elements.get(2));
-        System.out.println(elements.get(3));
-        System.out.println(elements.get(4));
-        System.out.println(elements.toString());
+        ElementsClass<String> stringClass = new ElementsClass<>();
+        stringClass.add("String");
+        System.out.println(stringClass.get(0));
+        System.out.println(stringClass.get(1)); //check for getting wrong index
+
+        ElementsClass<Character> characterClass = new ElementsClass<>();
+        characterClass.add('5');
+        characterClass.add((char) 55);
+        System.out.println(characterClass.get(0));
+        System.out.println(characterClass.get(1));
+
+        ElementsClass<Boolean> booleanClass = new ElementsClass<>();
+        booleanClass.add(true);
+        booleanClass.add(false);
+        System.out.println(booleanClass.get(0));
+        System.out.println(booleanClass.get(1));
+
 
     }
 
