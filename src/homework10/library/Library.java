@@ -12,7 +12,7 @@ public class Library {
         if (!books.isEmpty()) {
             for (Book b : books) {
                 if (book.getId() == b.getId()) {
-                    System.out.println("Book is already exist");
+                    System.out.println("Book with same ID is already exist");
                     return;
                 }
             }
@@ -31,21 +31,20 @@ public class Library {
             }
         }
         System.out.println("Book doesn't exist with ID " + id);
-
     }
 
     public List<Book> getBooks() {
         return books;
     }
 
-    public boolean editBook(Book book) {
+    public void editBook(Book book) {
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getId() == book.getId()) {
+                book.setOrderNumber(books.get(i).getOrderNumber());
                 books.set(i, book);
-                return true;
+                return;
             }
         }
-        return false;
     }
 
     public void setBooks(List<Book> books) {
