@@ -2,7 +2,7 @@ package homework10.library;
 
 import java.util.*;
 
-public class LibraryRunner {
+public class LibraryManualRunner {
     public static void main(String[] args) {
 
         Library library = new Library();
