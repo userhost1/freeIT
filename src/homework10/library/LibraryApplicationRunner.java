@@ -128,7 +128,7 @@ public class LibraryApplicationRunner {
         doContinue();
     }
 
-    private static void addBook() throws IOException {
+    public static void addBook() throws IOException {
 
         System.out.println("    введите пожалуйста ID ");
         int id = input();
@@ -148,7 +148,7 @@ public class LibraryApplicationRunner {
         doContinue();
     }
 
-    private static void remove() throws IOException {
+    public static void remove() throws IOException {
 
         System.out.println("    введите пожалуйста ID ");
         int id = input();
@@ -162,7 +162,7 @@ public class LibraryApplicationRunner {
         doContinue();
     }
 
-    private static void editBook() throws IOException {
+    public static void editBook() throws IOException {
 
         System.out.println("    введите пожалуйста ID ");
         int id = input();
@@ -199,7 +199,7 @@ public class LibraryApplicationRunner {
         return true;
     }
 
-    private static void doContinue() throws IOException {
+    public static void doContinue() throws IOException {
         System.out.println("Желаете продолжить работу с приложением?" +
                 "\n 1 - да" +
                 "\n 2 - нет");
@@ -223,7 +223,7 @@ public class LibraryApplicationRunner {
         }
     }
 
-    private static void closeApplication() {
+    public static void closeApplication() {
         System.out.println("Работа c приложением завершена. Спасибо!");
         try {
             in.close();
