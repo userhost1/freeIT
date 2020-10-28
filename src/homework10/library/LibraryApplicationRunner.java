@@ -1,7 +1,4 @@
-package homework10.libraryApplication;
-
-import homework10.library.Book;
-import homework10.library.Library;
+package homework10.library;
 
 import java.io.BufferedReader;
 import java.io.IOException;
