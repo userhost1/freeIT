@@ -18,7 +18,6 @@ public class Part3T34 {
 
             String line;
             StringBuilder text = new StringBuilder();
-            int words = 0, punctuationMarks = 0;
 
             while ((line = reader.readLine()) != null) {
                 text.append(line);
