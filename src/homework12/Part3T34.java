@@ -13,7 +13,7 @@ import java.util.TreeSet;
 public class Part3T34 {
     public static void main(String[] args) throws IOException {
 
-        int countDigits = 0;
+        int sunDigits = 0;
         List<Integer> digits = new ArrayList<>();
         Set<Integer> setDigits = new TreeSet<>();
 
@@ -25,7 +25,7 @@ public class Part3T34 {
                 if (Character.isDigit((char) symbol)) {
                     digits.add(Integer.parseInt(String.valueOf((char) symbol)));
                     setDigits.add(Integer.parseInt(String.valueOf((char) symbol)));
-                    countDigits += Integer.parseInt(String.valueOf((char) symbol));
+                    sunDigits += Integer.parseInt(String.valueOf((char) symbol));
                 }
             }
 
@@ -34,7 +34,7 @@ public class Part3T34 {
         }
 
         System.out.println("Найденные числа: " + digits.toString());
-        System.out.println("Сумма чисел: " + countDigits);
+        System.out.println("Сумма чисел: " + sunDigits);
         System.out.println("Вывод без повторений: " + setDigits.toString());
 
     }
