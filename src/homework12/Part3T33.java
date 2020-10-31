@@ -28,8 +28,8 @@ public class Part3T33 {
 
             char[] p = {'.', ',', '!', '?', '-', '—', ';', ':'};
 
-            for (int i = 0; i < text.toString().length(); i++) {
-                char c = text.toString().charAt(i);
+            for (int i = 0; i < text.length(); i++) {
+                char c = text.charAt(i);
                 for (char symbol : p) {
                     if (symbol == c) {
                         punctuationMarks++;
