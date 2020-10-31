@@ -1,47 +1,41 @@
 package homework12;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-//  Имеется файл с текстом, в котором присутствуют числа. Найти все числа,
-//  распечатать, посчитать сумму, убрать все повторяющиеся числа и снова
-//  распечатать.
+//  Имеется файл с текстом, в котором присутствуют числа.
+//  Найти все числа, распечатать, посчитать сумму,
+//  убрать все повторяющиеся числа и снова распечатать.
 
 public class Part3T34 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("e:\\demoWithText.txt"))) {
+        int countDigits = 0;
+        List<Integer> digits = new ArrayList<>();
+        Set<Integer> setDigits = new TreeSet<>();
 
-            String line;
-            StringBuilder text = new StringBuilder();
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(new File("e:\\demoWithText.txt")))) {
 
-            while ((line = reader.readLine()) != null) {
-                text.append(line);
-            }
+            int symbol;
 
-            List<Integer> digits = new ArrayList<>();
-            Set<Integer> setDigits = new TreeSet<>();
-            int countDigits = 0;
-
-            for (int i = 0; i < text.length(); i++) {
-                char c = text.charAt(i);
-                if (Character.isDigit(c)) {
-                    digits.add(Integer.parseInt(String.valueOf(c)));
-                    setDigits.add(Integer.parseInt(String.valueOf(c)));
-                    countDigits += Integer.parseInt(String.valueOf(c));
+            while ((symbol = reader.read()) != -1) {
+                if (Character.isDigit((char) symbol)) {
+                    digits.add(Integer.parseInt(String.valueOf((char) symbol)));
+                    setDigits.add(Integer.parseInt(String.valueOf((char) symbol)));
+                    countDigits += Integer.parseInt(String.valueOf((char) symbol));
                 }
             }
-            System.out.println(digits.toString());
-            System.out.println("Сумма чисел: " + countDigits);
-            System.out.println("Вывод без повторений: " + setDigits.toString());
-
 
         } catch (Exception e) {
             System.out.println("Что-то пошло не так!");
         }
+
+        System.out.println("Найденные числа: " + digits.toString());
+        System.out.println("Сумма чисел: " + countDigits);
+        System.out.println("Вывод без повторений: " + setDigits.toString());
+
     }
 }
