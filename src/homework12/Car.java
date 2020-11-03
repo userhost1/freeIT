@@ -2,7 +2,9 @@ package homework12;
 
 import java.io.Serializable;
 
-public class Car implements Serializable {
+public class Car implements Serializable{
+
+    private static final long serialVersionUID = -8710272270009029797L;
 
     private String brand;
     private int maxSpeed;
