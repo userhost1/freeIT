@@ -27,6 +27,7 @@ public class Part3T36 {
         for (int i = 0; i < files.size(); i++) {
             System.out.println(files.get(i));
         }
+
         System.out.println("ROOTS");
         for (int i = 0; i < roots.size(); i++) {
             System.out.println(roots.get(i));
