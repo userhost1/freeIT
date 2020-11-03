@@ -33,6 +33,5 @@ public class Part3T35 {
         System.out.println("count: " + count);
         System.out.println("summa: " + summa);
         System.out.println("Среднее арифметическое: " + ((double) summa / count));
-
     }
 }
