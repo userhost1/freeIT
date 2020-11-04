@@ -53,9 +53,7 @@ public class AdditionalTask_3 {
         }
 
         System.out.println("Количество предложений к исправлению: " + countSentences);
-        for (String s : sentences) {
-            System.out.println(s);
-        }
+        sentences.forEach(System.out::println);
     }
 
     public static boolean censor(String text) {
