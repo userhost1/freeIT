@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="devices.xsd" xmlns:cv="devices.xsd">
+
+    <xsd:element name="Devices" type="cv:Devices"/>
+    <xsd:complexType name="Devices">
+        <xsd:sequence>
+            <xsd:element name="Device" type="cv:Device" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Device">
+        <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="Origin" type="xsd:string"/>
+            <xsd:element name="Price" type="cv:Price"/>
+            <xsd:element name="Type" type="cv:Type"/>
+            <xsd:element name="Critical" type="xsd:boolean"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Price">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:positiveInteger">
+                <xsd:attribute name="currency" use="optional" default="BYN">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="USD"/>
+                            <xsd:enumeration value="EUR"/>
+                            <xsd:enumeration value="BYN"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Type">
+        <xsd:sequence>
+            <xsd:element name="Peripheral" type="xsd:boolean"/>
+            <xsd:element name="wattConsumption" type="xsd:integer"/>
+            <xsd:element name="hasCooler" type="xsd:boolean"/>
+            <xsd:element name="typeDevice" default="multimedia">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="multimedia"/>
+                        <xsd:enumeration value="io"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="port" default="USB">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="COM"/>
+                        <xsd:enumeration value="USB"/>
+                        <xsd:enumeration value="LPT"/>
+                        <xsd:enumeration value="SATA"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="ID" type="cv:ID_Device" use="required"/>
+    </xsd:complexType>
+    <xsd:simpleType name="ID_Device">
+        <xsd:restriction base="xsd:ID">
+            <xsd:pattern value="[A-Za-z]{3}[\d]{5}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
