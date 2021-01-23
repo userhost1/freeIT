@@ -9,7 +9,7 @@ import java.io.File;
 
 public class main {
     public static void main(String[] args) {
-        boolean valid = validatorXMLSchema("D://ONLINE_freeIT//src//homework13/devices.xsd", "D://ONLINE_freeIT//src/homework13/devicesCatalogue.xml");
+        boolean valid = validatorXMLSchema("D:/ONLINE_freeIT/src/homework13/devices.xsd", "D:/ONLINE_freeIT/src/homework13/devicesCatalogue.xml");
         System.out.println("Schema is valid: " + valid);
     }
 
