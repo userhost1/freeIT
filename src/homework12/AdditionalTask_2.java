@@ -21,9 +21,9 @@ import java.util.StringTokenizer;
 public class AdditionalTask_2 {
     public static void main(String[] args) {
 
-        StringBuffer text = new StringBuffer();
+        StringBuilder text = new StringBuilder();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\AdditionalTask_2_DEMO.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./src/homework12/AdditionalTask_2_DEMO.txt"))) {
 
             String line;
 
@@ -32,12 +32,12 @@ public class AdditionalTask_2 {
             }
 
         } catch (IOException e) {
-            System.out.println("Oops ошибочка подъехала при чтении: " + e);
+            System.out.println("Oops! Ошибочка при чтении: " + e);
         }
 
         StringTokenizer tokens = new StringTokenizer(text.toString(), ".!?:");
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("E:\\AdditionalTask_2_DEMO_NEW.txt"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("./src/homework12/AdditionalTask_2_DEMO_NEW.txt"))) {
             while (tokens.hasMoreElements()) {
 
                 String element = tokens.nextElement().toString().trim();
@@ -49,7 +49,7 @@ public class AdditionalTask_2 {
 
             }
         } catch (Exception e) {
-            System.out.println("Oops ошибочка подъехала при записи: " + e);
+            System.out.println("Oops! Ошибочка при записи: " + e);
         }
 
     }

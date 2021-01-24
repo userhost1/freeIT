@@ -10,13 +10,13 @@ import java.util.ArrayList;
 //  После запуска программы должен создать файл, который будет содержать в себе только палиндромы.
 
 public class AdditionalTask_1 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
 
         ArrayList<String> palindromList = new ArrayList<>();
 
         char[] punctuationMarks = {'.', ',', '!', '?', ';', ':'};
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\demoWords.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./src/homework12/demoWords.txt"))) {
             String word = "";
 
             while ((word = reader.readLine()) != null) {

@@ -11,13 +11,13 @@ import java.util.TreeSet;
 //  убрать все повторяющиеся числа и снова распечатать.
 
 public class Part3T34 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         int summ = 0;
         List<Integer> digits = new ArrayList<>();
         Set<Integer> setDigits = new TreeSet<>();
 
-        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(new File("e:\\demoWithText.txt")))) {
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(new File("./src/homework12/demoWithText.txt")))) {
 
             int symbol;
 

@@ -6,7 +6,7 @@ package homework12;
 import java.io.*;
 
 public class Part3T35 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         int count = 0, summa = 0;
 

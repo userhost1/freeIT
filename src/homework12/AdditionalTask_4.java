@@ -27,13 +27,13 @@ public class AdditionalTask_4 {
 
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
 
-        Car load1 = null;
-        Car load2 = null;
+//        Car load1 = null;
+//        Car load2 = null;
 
         try (ObjectInputStream ois = new ObjectInputStream(byteArrayInputStream)) {
 
-            load1 = (Car) ois.readObject();
-            load2 = (Car) ois.readObject();
+            Car load1 = (Car) ois.readObject();
+            Car load2 = (Car) ois.readObject();
 
             System.out.println("after deserializable; " + load1.toString());
             System.out.println("after deserializable; " + load2.toString());

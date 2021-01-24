@@ -28,9 +28,9 @@ public class AdditionalTask_3 {
 
     public static void main(String[] args) {
 
-        StringBuffer text = new StringBuffer();
+        StringBuilder text = new StringBuilder();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\demoWithText.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./src/homework12/demoWithText.txt"))) {
 
             String line;
 
@@ -58,7 +58,7 @@ public class AdditionalTask_3 {
 
     public static boolean censor(String text) {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\demoCensor.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./src/homework12/demoCensor.txt"))) {
 
             String word;
 

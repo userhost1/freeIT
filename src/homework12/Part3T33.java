@@ -2,15 +2,14 @@ package homework12;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.StringTokenizer;
 
 //  Создать файл с текстом, прочитать, подсчитать в тексте количество знаков препинания и слов.
 
 public class Part3T33 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("e:\\demoWithText.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./src/homework12/demoWithText.txt"))) {
 
             String line;
             StringBuilder text = new StringBuilder();
