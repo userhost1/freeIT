@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<vl:Devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="devices.xsd"
+            xmlns:vl="devices.xsd">
+    <Device>
+        <Name>SSD</Name>
+        <Origin>China</Origin>
+        <Price currency="USD">52</Price>
+        <Type ID="abc12345">
+            <Peripheral>false</Peripheral>
+            <wattConsumption>5</wattConsumption>
+            <hasCooler>false</hasCooler>
+            <typeDevice>io</typeDevice>
+            <port>SATA</port>
+        </Type>
+        <Critical>true</Critical>
+    </Device>
+    <Device>
+        <Name>Mouse</Name>
+        <Origin>China</Origin>
+        <Price currency="USD">20</Price>
+        <Type ID="abc12346">
+            <Peripheral>false</Peripheral>
+            <wattConsumption>1</wattConsumption>
+            <hasCooler>false</hasCooler>
+            <typeDevice>io</typeDevice>
+            <port>USB</port>
+        </Type>
+        <Critical>false</Critical>
+    </Device>
+</vl:Devices>
