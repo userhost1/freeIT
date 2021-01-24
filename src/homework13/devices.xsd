@@ -20,7 +20,7 @@
     <xsd:complexType name="Price">
         <xsd:simpleContent>
             <xsd:extension base="xsd:positiveInteger">
-                <xsd:attribute name="currency" use="optional" default="BYN">
+                <xsd:attribute name="currency" default="BYN">
                     <xsd:simpleType>
                         <xsd:restriction base="xsd:string">
                             <xsd:enumeration value="USD"/>
