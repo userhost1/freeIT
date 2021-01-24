@@ -21,8 +21,10 @@ public class Part3T33 {
 
             StringTokenizer tokens = new StringTokenizer(text.toString(), ".,!?-—;:(){}<>«» \r\n\t\"");
             while (tokens.hasMoreElements()) {
-//              System.out.println(tokens.nextElement() + " ");
-                words++;
+                String word = tokens.nextElement().toString().trim();
+                if (!(isNumber(word)) && (word.trim().length() > 1 || word.trim().equalsIgnoreCase("я"))) {
+                    words++;
+                }
             }
 
             char[] p = {'.', ',', '!', '?', '-', '—', ';', ':'};
@@ -41,5 +43,14 @@ public class Part3T33 {
         } catch (Exception e) {
             System.out.println("Что-то пошло не так!");
         }
+    }
+
+    public static boolean isNumber(String number) {
+        try {
+            Double.parseDouble(number);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 }
