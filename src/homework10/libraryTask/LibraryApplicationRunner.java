@@ -47,12 +47,6 @@ public class LibraryApplicationRunner {
                 editBook();
                 break;
             case 5:
-//                System.out.println("Работа c приложением завершена. Спасибо!");
-//                try {
-//                    in.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
                 closeApplication();
                 break;
             default:
@@ -113,12 +107,6 @@ public class LibraryApplicationRunner {
                 break;
 
             case 5:
-//                System.out.println("Работа c приложением завершена. Спасибо!");
-//                try {
-//                    in.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
                 closeApplication();
                 break;
             default:
@@ -209,12 +197,6 @@ public class LibraryApplicationRunner {
                 start();
                 break;
             case 2:
-//                System.out.println("Работа c приложением завершена. Спасибо!");
-//                try {
-//                    in.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
                 closeApplication();
                 break;
             default:
