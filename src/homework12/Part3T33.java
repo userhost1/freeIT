@@ -2,15 +2,14 @@ package homework12;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.StringTokenizer;
 
 //  Создать файл с текстом, прочитать, подсчитать в тексте количество знаков препинания и слов.
 
 public class Part3T33 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("e:\\demoWithText.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./src/homework12/demoWithText.txt"))) {
 
             String line;
             StringBuilder text = new StringBuilder();
@@ -22,8 +21,10 @@ public class Part3T33 {
 
             StringTokenizer tokens = new StringTokenizer(text.toString(), ".,!?-—;:(){}<>«» \r\n\t\"");
             while (tokens.hasMoreElements()) {
-//              System.out.println(tokens.nextElement() + " ");
-                words++;
+                String word = tokens.nextElement().toString().trim();
+                if (!(isNumber(word)) && (word.trim().length() > 1 || word.trim().equalsIgnoreCase("я"))) {
+                    words++;
+                }
             }
 
             char[] p = {'.', ',', '!', '?', '-', '—', ';', ':'};
@@ -42,5 +43,14 @@ public class Part3T33 {
         } catch (Exception e) {
             System.out.println("Что-то пошло не так!");
         }
+    }
+
+    public static boolean isNumber(String number) {
+        try {
+            Double.parseDouble(number);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 }
